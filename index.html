@@ -21,7 +21,7 @@
     <!-- JavaScript File Here  -->
     <script defer src="./script.js"></script>
   </head>
-  <body class="bg-[#F4F7FF]">
+  <body id="bgColor" class="bg-[#F4F7FF]">
     <!-- header tag start  -->
     <header class="pt-6">
       <nav
@@ -36,10 +36,12 @@
             class="flex items-center justify-center gap-2 bg-[#F4F7FF] px-4 py-2 rounded-4xl"
           >
             <i class="fa-solid fa-square-check text-3xl text-[#3752FD]"></i>
-            <h3 class="font-bold text-3xl">23</h3>
+            <h3 id="total-number" class="font-bold text-3xl">23</h3>
           </div>
           <div class="bg-[#F4F7FF] p-2 rounded-full">
-            <img src="./assets/theme-btn.png" alt="" />
+            <button onclick="changeColor()">
+              <img src="./assets/theme-btn.png" alt="" />
+            </button>
           </div>
         </div>
       </nav>
@@ -47,10 +49,10 @@
     <!-- main tag start  -->
     <main>
       <!-- dashboard - card section  -->
-      <section class="container mx-auto pt-10 grid grid-cols-4 gap-8">
+      <section class="container mx-auto pt-10 mb-10 grid md:grid-cols-4 gap-8">
         <div class="col-span-3 bg-white rounded-2xl p-6">
           <!-- dashboard  -->
-          <div class="grid grid-cols-4 gap-4">
+          <div class="grid md:grid-cols-4 gap-4">
             <!-- dcard - 1 -->
             <div
               class="bg-[#F4F7FF] py-8 flex justify-center items-center gap-4 rounded-lg"
@@ -62,12 +64,14 @@
                 <h2 class="text-lg text-[#00303C] font-medium">
                   Task Assigned
                 </h2>
-                <h1 class="text-3xl font-bold">05</h1>
+                <h1 class="text-3xl font-bold">
+                  0<span id="card-number">6</span>
+                </h1>
               </div>
             </div>
             <!-- dcard - 2 -->
             <div
-              class="bg-linear-to-r from-[#3752FD] to-[#9BA8F8] rounded-xl flex gap-7 px-8 py-6 items-center col-span-2"
+              class="bg-linear-to-r from-[#3752FD] to-[#9BA8F8] rounded-xl flex gap-7 px-8 py-6 items-center md:col-span-2"
             >
               <div>
                 <img src="./assets/board.png" alt="" />
@@ -93,11 +97,13 @@
             </div>
           </div>
           <!-- card container -->
-          <div class="grid grid-cols-3 gap-5 mt-10">
+          <div class="grid md:grid-cols-3 gap-5 mt-10">
             <!-- card - 1 -->
             <div class="bg-[#F4F7FF] rounded-xl p-6 flex flex-col gap-5">
               <p class="bg-white rounded-xl font-medium w-28 p-4">Shop Ease</p>
-              <h2 class="text-2xl font-medium">Fix Mobile Button Issue</h2>
+              <h2 class="text-2xl font-medium card-title">
+                Fix Mobile Button Issue
+              </h2>
               <p class="bg-white p-4 rounded-xl text-gray-600">
                 Debug using Chrome DevTools, check for overlapping elements, and
                 ensure onClick works properly and ensure onClick works properly
@@ -109,7 +115,7 @@
                 </div>
                 <div>
                   <button
-                    class="bg-[#3752FD] text-white py-2 px-4 font-medium rounded-xl"
+                    class="bg-[#3752FD] card-button text-white py-2 px-4 font-medium rounded-xl disabled:opacity-25"
                   >
                     Completed
                   </button>
@@ -119,10 +125,10 @@
             <!-- card - 2 -->
             <div class="bg-[#F4F7FF] rounded-xl p-6 flex flex-col gap-5">
               <p class="bg-white rounded-xl font-medium w-28 p-4">Shop Ease</p>
-              <h2 class="text-2xl font-medium">Fix Mobile Button Issue</h2>
+              <h2 class="text-2xl font-medium card-title">Add Dark Mode</h2>
               <p class="bg-white p-4 rounded-xl text-gray-600">
-                Debug using Chrome DevTools, check for overlapping elements, and
-                ensure onClick works properly and ensure onClick works properly
+                Store the user's preference in localStorage, update CSS
+                variables dynamically, and apply a smooth transition effect.
               </p>
               <div class="flex items-center justify-between">
                 <div>
@@ -131,7 +137,7 @@
                 </div>
                 <div>
                   <button
-                    class="bg-[#3752FD] text-white py-2 px-4 font-medium rounded-xl"
+                    class="bg-[#3752FD] card-button text-white py-2 px-4 font-medium rounded-xl disabled:opacity-25"
                   >
                     Completed
                   </button>
@@ -141,7 +147,9 @@
             <!-- card - 3 -->
             <div class="bg-[#F4F7FF] rounded-xl p-6 flex flex-col gap-5">
               <p class="bg-white rounded-xl font-medium w-28 p-4">Shop Ease</p>
-              <h2 class="text-2xl font-medium">Fix Mobile Button Issue</h2>
+              <h2 class="text-2xl font-medium card-title">
+                Optimize Home page 
+              </h2>
               <p class="bg-white p-4 rounded-xl text-gray-600">
                 Debug using Chrome DevTools, check for overlapping elements, and
                 ensure onClick works properly and ensure onClick works properly
@@ -153,7 +161,7 @@
                 </div>
                 <div>
                   <button
-                    class="bg-[#3752FD] text-white py-2 px-4 font-medium rounded-xl"
+                    class="bg-[#3752FD] card-button text-white py-2 px-4 font-medium rounded-xl disabled:opacity-25"
                   >
                     Completed
                   </button>
@@ -163,7 +171,7 @@
             <!-- card - 4   -->
             <div class="bg-[#F4F7FF] rounded-xl p-6 flex flex-col gap-5">
               <p class="bg-white rounded-xl font-medium w-28 p-4">Shop Ease</p>
-              <h2 class="text-2xl font-medium">Fix Mobile Button Issue</h2>
+              <h2 class="text-2xl font-medium card-title">Add new emoji 🤲</h2>
               <p class="bg-white p-4 rounded-xl text-gray-600">
                 Debug using Chrome DevTools, check for overlapping elements, and
                 ensure onClick works properly and ensure onClick works properly
@@ -175,7 +183,7 @@
                 </div>
                 <div>
                   <button
-                    class="bg-[#3752FD] text-white py-2 px-4 font-medium rounded-xl"
+                    class="bg-[#3752FD] card-button text-white py-2 px-4 font-medium rounded-xl disabled:opacity-25"
                   >
                     Completed
                   </button>
@@ -186,7 +194,9 @@
             <!-- card - 5 -->
             <div class="bg-[#F4F7FF] rounded-xl p-6 flex flex-col gap-5">
               <p class="bg-white rounded-xl font-medium w-28 p-4">Shop Ease</p>
-              <h2 class="text-2xl font-medium">Fix Mobile Button Issue</h2>
+              <h2 class="text-2xl font-medium card-title">
+                Integrate OpenAI API
+              </h2>
               <p class="bg-white p-4 rounded-xl text-gray-600">
                 Debug using Chrome DevTools, check for overlapping elements, and
                 ensure onClick works properly and ensure onClick works properly
@@ -198,7 +208,7 @@
                 </div>
                 <div>
                   <button
-                    class="bg-[#3752FD] text-white py-2 px-4 font-medium rounded-xl"
+                    class="bg-[#3752FD] card-button text-white py-2 px-4 font-medium rounded-xl disabled:opacity-25"
                   >
                     Completed
                   </button>
@@ -208,7 +218,9 @@
             <!-- card - 6  -->
             <div class="bg-[#F4F7FF] rounded-xl p-6 flex flex-col gap-5">
               <p class="bg-white rounded-xl font-medium w-28 p-4">Shop Ease</p>
-              <h2 class="text-2xl font-medium">Fix Mobile Button Issue</h2>
+              <h2 class="text-2xl font-medium card-title">
+                Improve Job searching
+              </h2>
               <p class="bg-white p-4 rounded-xl text-gray-600">
                 Debug using Chrome DevTools, check for overlapping elements, and
                 ensure onClick works properly and ensure onClick works properly
@@ -220,7 +232,7 @@
                 </div>
                 <div>
                   <button
-                    class="bg-[#3752FD] text-white py-2 px-4 font-medium rounded-xl"
+                    class="bg-[#3752FD] card-button text-white py-2 px-4 font-medium rounded-xl disabled:opacity-25"
                   >
                     Completed
                   </button>
@@ -237,15 +249,21 @@
           </div>
           <div>
             <button
-              class="bg-[#3752FD] text-white py-2 px-4 font-medium rounded-xl"
+              class="bg-[#3752FD] text-white py-2 px-4 font-medium rounded-xl disabled:opacity-25"
             >
               Clear History
             </button>
           </div>
+          <!-- add card  -->
+          <div id="card-add"></div>
         </div>
       </section>
     </main>
     <!-- footer tag start  -->
-    <footer></footer>
+    <footer class="bg-gray-900 p-15">
+      <p class="text-white text-center font-medium">
+        © 2025 DevBoard. All rights reserved.
+      </p>
+    </footer>
   </body>
 </html>
