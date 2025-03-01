@@ -15,7 +15,7 @@ for (let i = 0; i < cardButton.length; i++) {
     let minutes = now.getMinutes();
     let seconds = now.getSeconds();
     let ampm = hours >= 12 ? "PM" : "AM";
-    // Convert to 12-hour format
+    // 12-hour format
     hours = hours % 12 || 12;
     if (hours < 10) {
       hours = "0" + hours;
@@ -51,7 +51,7 @@ for (let i = 0; i < cardButton.length; i++) {
       "mt-2"
     );
     addedCard.appendChild(createElement);
-    alert("Task Updated Successful");
+    alert("Task Updated Successful .");
     cardButton[i].disabled = true;
 
     // dashboard card number decrement
@@ -63,7 +63,7 @@ for (let i = 0; i < cardButton.length; i++) {
     totalNumberText.innerText = totalNumber;
 
     if (cardNumber === 0) {
-      alert("all card click");
+      alert("Congratulations!!! You have completed all the current task .");
     }
   });
 }
@@ -73,7 +73,42 @@ deleteButton.addEventListener("click", function () {
   historyCard.innerText = "";
 });
 
-// Change Color
+// Current Date :
+const now = new Date();
+const days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
+const months = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+const dayName = days[now.getDay()];
+const day = now.getDate();
+const monthName = months[now.getMonth()];
+const year = now.getFullYear();
+
+const currentDate = document.getElementById("current-date");
+currentDate.innerText = dayName + " " + day + " " + monthName + " " + year;
+
+console.log(`Today is ${dayName}, ${monthName} ${day}, ${year}`);
+
+// Change Color :
 function changeBgColor() {
   const randomColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
   document.getElementById("bgColor").style.backgroundColor = randomColor;
