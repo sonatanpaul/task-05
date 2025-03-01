@@ -106,10 +106,14 @@ const year = now.getFullYear();
 const currentDate = document.getElementById("current-date");
 currentDate.innerText = dayName + " " + day + " " + monthName + " " + year;
 
-console.log(`Today is ${dayName}, ${monthName} ${day}, ${year}`);
-
 // Change Color :
 function changeBgColor() {
   const randomColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
   document.getElementById("bgColor").style.backgroundColor = randomColor;
 }
+
+// Moving another page
+const link = document.getElementById("link");
+link.addEventListener("click", function () {
+  window.location.href = "./blogs.html";
+});
