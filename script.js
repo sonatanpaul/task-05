@@ -75,28 +75,20 @@ deleteButton.addEventListener("click", function () {
 
 // Current Date :
 const now = new Date();
-const days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
+const days = ["Sun", "Mon", "Tues", "Wed", "Thu", "Fri", "Sat"];
 const months = [
-  "January",
-  "February",
-  "March",
-  "April",
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
   "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sept",
+  "Oct",
+  "Nov",
+  "Dec",
 ];
 const dayName = days[now.getDay()];
 const day = now.getDate();
@@ -104,7 +96,8 @@ const monthName = months[now.getMonth()];
 const year = now.getFullYear();
 
 const currentDate = document.getElementById("current-date");
-currentDate.innerText = dayName + " " + day + " " + monthName + " " + year;
+currentDate.innerText =
+  dayName + "," + " " + day + " " + monthName + " " + year;
 
 // Change Color :
 function changeBgColor() {
