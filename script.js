@@ -15,7 +15,7 @@ for (let i = 0; i < cardButton.length; i++) {
     let minutes = now.getMinutes();
     let seconds = now.getSeconds();
     let ampm = hours >= 12 ? "PM" : "AM";
-    // 12-hour format
+    // hour format
     hours = hours % 12 || 12;
     if (hours < 10) {
       hours = "0" + hours;
