@@ -29,7 +29,113 @@
       </nav>
     </header>
     <!-- main tag start  -->
-    <main></main>
+    <main>
+      <!-- Blogs Section  -->
+      <section class="container mx-auto mt-8 mb-8">
+        <h1 class="text-center text-3xl font-bold mb-8">Blogs</h1>
+        <div class="flex flex-col gap-5">
+          <div class="bg-white p-5 rounded-lg">
+            <h2 class="text-2xl font-medium">
+              Question-1: What are the different ways to select an element in
+              the DOM?
+            </h2>
+            <hr class="border-gray-300 border-dashed w-full mt-3 mb-3" />
+            <ol class="text-gray-600 text-lg list-decimal p-4">
+              <li>
+                <span class="font-bold">getElementById:</span> Selects a single
+                element by its unique ID.
+              </li>
+              <li>
+                <span class="font-bold">getElementsByClassName:</span> Selects
+                multiple elements by their class name. It returns an
+                HTMLCollection.
+              </li>
+              <li>
+                <span class="font-bold">getElementsByTagName:</span> Selects
+                multiple elements by their tag name like div, p, etc.. It also
+                returns an HTMLCollection.
+              </li>
+              <li>
+                <span class="font-bold">querySelector:</span> Selects the first
+                element that matches a specified CSS selector.
+              </li>
+              <li>
+                <span class="font-bold">querySelectorAll:</span> Selects all
+                elements that match a specified CSS selector. It returns a
+                NodeList.
+              </li>
+            </ol>
+          </div>
+          <!-- Q -2  -->
+          <div class="bg-white p-5 rounded-lg">
+            <h2 class="text-2xl font-medium">
+              Question-2: What is the difference between innerHTML, innerText,
+              and textContent ?
+            </h2>
+            <hr class="border-gray-300 border-dashed w-full mt-3 mb-3" />
+            <ol class="text-gray-600 text-lg list-decimal p-4">
+              <li>
+                <span class="font-bold">innerHtml</span> returns all text,
+                including html tags, that is contained by an element.
+              </li>
+              <li>
+                <span class="font-bold">innerText</span> returns all text
+                contained by an element and all its child elements.
+              </li>
+              <li>
+                <span class="font-bold">textContents</span> is all text
+                contained by an element and all its children that are for
+                formatting purposes only.
+              </li>
+            </ol>
+          </div>
+          <!-- Q - 3  -->
+          <div class="bg-white p-5 rounded-lg">
+            <h2 class="text-2xl font-medium">
+              Question-3: What is event delegation in the DOM?
+            </h2>
+            <hr class="border-gray-300 border-dashed w-full mt-3 mb-3" />
+            <ol class="text-gray-600 text-lg list-decimal p-4">
+              <li>
+                Event Delegation is a pattern based upon the concept of Event
+                Bubbling. It is an event-handling pattern that allows you to
+                handle events at a higher level in the DOM tree other than the
+                level where the event was first received.
+              </li>
+            </ol>
+          </div>
+          <!-- Q- 4  -->
+          <div class="bg-white p-5 rounded-lg">
+            <h2 class="text-2xl font-medium">
+              Question-4: What is event bubbling in the DOM?
+            </h2>
+            <hr class="border-gray-300 border-dashed w-full mt-3 mb-3" />
+            <ol class="text-gray-600 text-lg list-decimal p-4">
+              <li>
+                Event Bubbling is a concept in the DOM. It happens when an
+                element receives an event, and that event bubbles up to its
+                parent and ancestor elements in the DOM tree until it gets to
+                the root element.
+              </li>
+            </ol>
+          </div>
+
+          <!-- Q- 5  -->
+          <div class="bg-white p-5 rounded-lg">
+            <h2 class="text-2xl font-medium">
+              Question-5: How do you create, add, and remove elements using
+              JavaScript?
+            </h2>
+            <hr class="border-gray-300 border-dashed w-full mt-3 mb-3" />
+            <ol class="text-gray-600 text-lg list-decimal p-4">
+              <li>Creating Elements using document.createElement() method.</li>
+              <li>Adding Elements using appendChild() method</li>
+              <li>Removing Elements using remove() method</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+    </main>
     <!-- footer tag start  -->
     <footer class="bg-gray-900 p-15">
       <p class="text-white text-center font-medium">

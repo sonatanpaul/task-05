@@ -51,7 +51,7 @@ for (let i = 0; i < cardButton.length; i++) {
       "mt-2"
     );
     addedCard.appendChild(createElement);
-    alert("Task Updated Successful .");
+    alert("Board Updated Successful .");
     cardButton[i].disabled = true;
 
     // dashboard card number decrement
